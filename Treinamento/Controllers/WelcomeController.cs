@@ -30,5 +30,15 @@ namespace Treinamento.Controllers
         {
             return "Welcome.Details, ID = " + id;
         }
+
+        public RedirectToRouteResult Redirect()
+        {
+            return RedirectToRoute(new
+            {
+                controller = "Historico",
+                action = "Arquivo",
+                data = "09-01-1990"
+            });
+        }
     }
 }
