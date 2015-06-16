@@ -8,10 +8,11 @@ namespace Treinamento.Controllers
 {
     public class WelcomeController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            DateTime data = DateTime.Now;
-            return View(data);
+            ViewBag.Message = "Hello";
+            ViewBag.Date = DateTime.Now;
+            return View();
         }
 
         public ActionResult BemVindo()
