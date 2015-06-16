@@ -8,18 +8,15 @@ namespace Treinamento.Controllers
 {
     public class WelcomeController : Controller
     {
-        //
-        // GET: /Welcome/
-
         public string Index()
         {
             return "Hello World";
         }
 
-        public string OutraAction()
+        public string Browse(string genre)
         {
-            return "Outra Action";
+            string message = HttpUtility.HtmlEncode("Store.Browse, Genre = " + genre);
+            return message;
         }
-
     }
 }
