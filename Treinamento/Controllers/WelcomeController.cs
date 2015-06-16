@@ -8,9 +8,9 @@ namespace Treinamento.Controllers
 {
     public class WelcomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello World";
+            return View();
         }
 
         public string Browse(string genre)
