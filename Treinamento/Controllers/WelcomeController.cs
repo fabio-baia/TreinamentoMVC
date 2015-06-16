@@ -10,6 +10,11 @@ namespace Treinamento.Controllers
     {
         public ActionResult Index()
         {
+            return RedirectToAction("BemVindo");
+        }
+
+        public ActionResult BemVindo()
+        {
             return View();
         }
 
