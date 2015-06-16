@@ -10,7 +10,8 @@ namespace Treinamento.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("BemVindo");
+            DateTime data = DateTime.Now;
+            return View(data);
         }
 
         public ActionResult BemVindo()
