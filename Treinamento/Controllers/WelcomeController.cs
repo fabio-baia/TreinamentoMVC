@@ -12,7 +12,7 @@ namespace Treinamento.Controllers
     {
         public ViewResult Index()
         {
-            ViewBag.Message = "Hello";
+            ViewBag.Message = "<strong>Hello em negrito</strong>";
             ViewBag.Date = DateTime.Now;
             return View();
         }
