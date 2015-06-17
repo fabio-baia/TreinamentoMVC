@@ -4,13 +4,33 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Web;
-using System.Web.Http.Filters;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Treinamento.Filters
 {
     public class LogActionFilter : ActionFilterAttribute
     {
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            Log(filterContext.RouteData);
+        }
+
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            Log(filterContext.RouteData);
+        }
+
+        public override void OnResultExecuting(ResultExecutingContext filterContext)
+        {
+            Log(filterContext.RouteData);
+        }
+
+        public override void OnResultExecuted(ResultExecutedContext filterContext)
+        {
+            Log(filterContext.RouteData);
+        }
+
         private static void Log(RouteData routeData, [CallerMemberName]string methodName = "")
         {
             var controllerName = routeData.Values["controller"];
