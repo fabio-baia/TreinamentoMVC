@@ -186,8 +186,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Binders\DateTimeBinder.cs" />
+    <Compile Include="Context\Initializer\LojaInitializer.cs" />
     <Compile Include="Context\LojaContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\HistoricoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
@@ -314,6 +316,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Welcome\Index.cshtml" />
+    <Content Include="Views\Album\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
