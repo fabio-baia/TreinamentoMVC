@@ -8,5 +8,11 @@ namespace Treinamento.Context
         public DbSet<Album> Albums { get; set; }
         public DbSet<Artista> Artistas { get; set; }
         public DbSet<Genero> Generos { get; set; }
+
+        public LojaContext() : base("DefaultConnection")
+        {
+
+        }
+
     }
 }
