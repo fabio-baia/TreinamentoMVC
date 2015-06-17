@@ -84,3 +84,5 @@ c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinament
 c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.csprojResolveAssemblyReference.cache
 c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.dll
 c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.pdb
+c:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\bin\EntityFramework.SqlServer.dll
+c:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\bin\EntityFramework.SqlServer.xml
