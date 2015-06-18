@@ -17,8 +17,11 @@
 @path.VirtualPath
 @using (Html.BeginForm("Busca", "Album", FormMethod.Get))
 {
-    @Html.Label("Pesquisa")
-    @Html.TextBox("Busca", "", new { placeholder = "Digite aqui o titulo do album" })
+    @Html.Label("Generos")
+    @Html.DropDownList("IdGenero", null, "Escolha um genero")
+    
+    @Html.Label("Titulo")
+    @Html.TextBox("Titulo", "", new { placeholder = "Digite aqui o titulo do album" })
     <input type="submit" value="Buscar" />
 }
 

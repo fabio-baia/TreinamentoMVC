@@ -49,6 +49,9 @@ namespace Treinamento.Controllers
             IQueryable<Album> albums = db.Albums;
             if (!string.IsNullOrWhiteSpace(busca))
                 albums = albums.Where(a => a.Titulo.Contains(busca));
+
+            ViewBag.IdGenero = new SelectList(db.Generos.OrderBy(g => g.Nome), "Id", "Nome");
+
             return View(albums.ToList());
         }
     }
