@@ -2,10 +2,19 @@
 
 @{
     ViewBag.Title = "Busca";
+    var context = ViewContext.RequestContext;
+    var values = new RouteValueDictionary
+    {
+        {"controller", "Album"},
+        {"action", "Busca"}
+    };
+
+    var path = RouteTable.Routes.GetVirtualPath(context, values);
 }
 
 <h2>Busca</h2>
 
+@path.VirtualPath
 @using (Html.BeginForm("Busca", "Album", FormMethod.Get))
 {
     <input type="text" name="q" placeholder="Digite aqui o titulo do album" />
