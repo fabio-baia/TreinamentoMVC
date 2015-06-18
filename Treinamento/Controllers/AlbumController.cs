@@ -34,8 +34,15 @@ namespace Treinamento.Controllers
             return View(albums.ToList());
         }
 
+        public ActionResult Editar()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Editar(Album album)
         {
+            ModelState.AddModelError("Titulo", "Que nome horrível");
             return View();
         }
 

@@ -7,20 +7,22 @@
 @Html.BeginForm();
 
 <form method="POST">
+
+    @Html.ValidationMessage("Titulo")
     <label>
         Titulo<input type="" value="" name="Titulo"/><br/>
     </label>
     <label>
-        GeneroId<input type="" value="" name="GeneroId"/><br />
+        GeneroId<input type="" value="" name="GeneroId"/><br/>
     </label>
     <label>
-        ArtistaId<input type="" value="" name="ArtistaId"/><br />
+        ArtistaId<input type="" value="" name="ArtistaId"/><br/>
     </label>
     <label>
-        Valor<input type="" value="" name="Valor"/><br />
+        Valor<input type="" value="" name="Valor"/><br/>
     </label>
     <label>
-        UrlArte<input type="" value="" name="UrlArte"/><br />
+        UrlArte<input type="" value="" name="UrlArte"/><br/>
     </label>
 
     <input type="submit" value="Salvar"/>
