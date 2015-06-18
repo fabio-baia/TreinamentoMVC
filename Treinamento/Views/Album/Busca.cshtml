@@ -6,10 +6,11 @@
 
 <h2>Busca</h2>
 
-<form method="POST">
-    <input type="text" name="q" placeholder="Digite aqui o titulo do album"/>
+@using (Html.BeginForm("Busca", "Album", FormMethod.Get))
+{
+    <input type="text" name="q" placeholder="Digite aqui o titulo do album" />
     <input type="submit" value="Buscar" />
-</form>
+}
 
 <table>
     <tr>
