@@ -34,6 +34,9 @@ namespace Treinamento.Controllers
             return View(albums.ToList());
         }
 
-        
+        public ActionResult Editar(Album album)
+        {
+            return View();
+        }
     }
 }

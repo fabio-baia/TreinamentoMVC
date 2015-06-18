@@ -318,6 +318,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Welcome\Index.cshtml" />
     <Content Include="Views\Album\Index.cshtml" />
+    <Content Include="Views\Album\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
