@@ -17,7 +17,7 @@
 @path.VirtualPath
 @using (Html.BeginForm("Busca", "Album", FormMethod.Get))
 {
-    <input type="text" name="q" placeholder="Digite aqui o titulo do album" />
+    @Html.TextBox("Busca", "", new { placeholder = "Digite aqui o titulo do album" })
     <input type="submit" value="Buscar" />
 }
 

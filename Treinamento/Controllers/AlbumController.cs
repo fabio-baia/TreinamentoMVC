@@ -39,7 +39,7 @@ namespace Treinamento.Controllers
             return View();
         }
 
-        public ActionResult Busca(string q)
+        public ActionResult Busca(string busca)
         {
             //var albums = from album in db.Albums
             //    orderby album.Titulo ascending
@@ -47,8 +47,8 @@ namespace Treinamento.Controllers
             //    select album;
 
             IQueryable<Album> albums = db.Albums;
-            if (!string.IsNullOrWhiteSpace(q))
-                albums = albums.Where(a => a.Titulo.Contains(q));
+            if (!string.IsNullOrWhiteSpace(busca))
+                albums = albums.Where(a => a.Titulo.Contains(busca));
             return View(albums.ToList());
         }
     }
