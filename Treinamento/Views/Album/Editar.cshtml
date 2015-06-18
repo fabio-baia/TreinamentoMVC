@@ -27,3 +27,17 @@
 
     <input type="submit" value="Salvar"/>
 </form>
+
+@helper ListingItems(string[] items)
+{
+    <ol>
+        @foreach (string item in items)
+        {
+            <li>@item</li>
+        }
+    </ol>
+}
+
+<h1>Linguagens de Programação</h1>
+
+@ListingItems(new string[] { "C# for dummies", "C++ for dummies", "C# for dummies" })

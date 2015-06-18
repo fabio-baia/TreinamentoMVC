@@ -54,4 +54,17 @@
     </tr>
 }
 
+    @helper ListingItems(string[] items)
+    {
+        <ol>
+            @foreach (string item in items)
+            {
+                <li>@item</li>
+            }
+        </ol>
+    }
+
+    @ListingItems(new string[] {"C# for dummies", "C++ for dummies", "C# for dummies"})
+
+
 </table>
