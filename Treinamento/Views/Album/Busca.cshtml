@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Treinamento.Models.Album>
+
+@{
+    ViewBag.Title = "Busca";
+}
+
+<h2>Busca</h2>
+
+<form method="POST">
+    <input type="text" name="q" placeholder="Digite aqui o titulo do album"/>
+    <input type="submit" value="Buscar" />
+</form>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+    </tr>
+}
+
+</table>

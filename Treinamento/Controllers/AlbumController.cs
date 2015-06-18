@@ -38,5 +38,18 @@ namespace Treinamento.Controllers
         {
             return View();
         }
+
+        public ActionResult Busca(string q)
+        {
+            //var albums = from album in db.Albums
+            //    orderby album.Titulo ascending
+            //    where album.Titulo.Contains(q)
+            //    select album;
+
+            IQueryable<Album> albums = db.Albums;
+            if (!string.IsNullOrWhiteSpace(q))
+                albums = albums.Where(a => a.Titulo.Contains(q));
+            return View(albums.ToList());
+        }
     }
 }
