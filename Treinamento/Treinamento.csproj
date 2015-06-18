@@ -199,6 +199,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HtmlHelperExtension.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artista.cs" />
