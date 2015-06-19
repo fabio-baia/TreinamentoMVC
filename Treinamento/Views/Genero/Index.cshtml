@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Treinamento.Models.Genero>
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+<h2>Generos</h2>
+
+<ul>
+    @foreach (var genero in Model)
+    {
+        <li>@genero.Nome</li>
+    }
+</ul>

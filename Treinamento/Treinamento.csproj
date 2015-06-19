@@ -191,6 +191,7 @@
     <Compile Include="Context\LojaContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
+    <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HistoricoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
@@ -322,6 +323,7 @@
     <Content Include="Views\Album\Editar.cshtml" />
     <Content Include="Views\Album\Busca.cshtml" />
     <Content Include="Views\Shared\_AlbumDisplay.cshtml" />
+    <Content Include="Views\Genero\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
