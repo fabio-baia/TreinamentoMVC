@@ -15,7 +15,9 @@ namespace Treinamento.Models
         public int ArtistId { get; set; }
         
         [DisplayName("Titulo")]
-        [DataType(DataType.MultilineText)]
+        [StringLength(15, ErrorMessage = "15 caracteres é o máximo permitido")]
+        [Required(ErrorMessage = "O título é obrigatório")]
+        [DataType(DataType.Text)]
         public string Titulo { get; set; }
         
         [DisplayName("Valor")]
