@@ -1,33 +1,39 @@
-﻿@using Treinamento.Helpers
+﻿@model Treinamento.Models.Album
+@using Treinamento.Helpers
 @{
     ViewBag.Title = "Criar";
 }
 
 <h2>Criar</h2>
 
-@Html.BeginForm();
+@using (Html.BeginForm())
+{
 
-<form method="POST">
 
+    @Html.LabelFor(m => m.Titulo)
+    @Html.TextBoxFor(m => m.Titulo)
     @Html.ValidationMessage("Titulo")
-    <label>
-        Titulo<input type="" value="" name="Titulo"/><br/>
-    </label>
-    <label>
-        GeneroId<input type="" value="" name="GeneroId"/><br/>
-    </label>
-    <label>
-        ArtistaId<input type="" value="" name="ArtistaId"/><br/>
-    </label>
-    <label>
-        Valor<input type="" value="" name="Valor"/><br/>
-    </label>
-    <label>
-        UrlArte<input type="" value="" name="UrlArte"/><br/>
-    </label>
 
+    @Html.LabelFor(m => m.GeneroId)
+    @Html.TextBoxFor(m => m.GeneroId)
+    @Html.ValidationMessage("GeneroId")
+
+    @Html.LabelFor(m => m.ArtistId)
+    @Html.TextBoxFor(m => m.ArtistId)
+    @Html.ValidationMessage("ArtistId")
+
+    @Html.LabelFor(m => m.Valor)
+    @Html.TextBoxFor(m => m.Valor)
+    @Html.ValidationMessage("Valor")
+
+    @Html.LabelFor(m => m.UrlArte)
+    @Html.TextBoxFor(m => m.UrlArte)
+    @Html.ValidationMessage("UrlArte")
+
+
+    
     <input type="submit" value="Salvar"/>
-</form>
+}
 
 @Html.LinkVoltar("Clique aqui para voltar")
 
