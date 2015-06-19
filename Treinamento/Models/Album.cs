@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace Treinamento.Models
 {
@@ -24,6 +25,7 @@ namespace Treinamento.Models
         public decimal Valor { get; set; }
         
         [DisplayName("UrlArte")]
+        [RegularExpression(@"^http://.*\.(png|jpg)$", ErrorMessage = "Url deve ser uma imagem .PNG ou .JPG")]
         public string UrlArte { get; set; }
         
         [DisplayName("Genero")]
