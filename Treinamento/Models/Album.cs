@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.Models
 {
@@ -14,6 +15,7 @@ namespace Treinamento.Models
         public int ArtistId { get; set; }
         
         [DisplayName("Titulo")]
+        [DataType(DataType.MultilineText)]
         public string Titulo { get; set; }
         
         [DisplayName("Valor")]
