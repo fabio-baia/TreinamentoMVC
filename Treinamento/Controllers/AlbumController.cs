@@ -34,9 +34,10 @@ namespace Treinamento.Controllers
             return View(albums.ToList());
         }
 
+        [ActionName("outronome")]
         public ActionResult Editar()
         {
-            return View();
+            return View("Editar");
         }
 
         [HttpPost]
