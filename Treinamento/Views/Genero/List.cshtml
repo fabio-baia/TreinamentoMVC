@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Treinamento.Models.Genero>
+
+@{
+    Layout = null;
+}
+
+<h2>List</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Nome</li>
+        <ul>
+            <li>@Html.DisplayFor(q => item.Albums)</li>
+        </ul>
+    }
+</ul>

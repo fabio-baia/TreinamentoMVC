@@ -336,6 +336,8 @@
     <Content Include="Views\Album\Busca.cshtml" />
     <Content Include="Views\Shared\_AlbumDisplay.cshtml" />
     <Content Include="Views\Genero\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Albums.cshtml" />
+    <Content Include="Views\Genero\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

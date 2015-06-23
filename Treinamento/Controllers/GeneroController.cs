@@ -17,5 +17,10 @@ namespace Treinamento.Controllers
             return View(_db.Generos.ToList());
         }
 
+        public ActionResult List()
+        {
+            return View(_db.Generos.ToList());
+        }
+
     }
 }
