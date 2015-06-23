@@ -86,3 +86,8 @@ c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinament
 c:\users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.pdb
 c:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\bin\EntityFramework.SqlServer.dll
 c:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\bin\EntityFramework.SqlServer.xml
+C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\bin\pt-BR\Treinamento.resources.dll
+C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.Resources.AlbumResources.resources
+C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.Resources.AlbumResources.pt-BR.resources
+C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.csproj.GenerateResource.Cache
+C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\pt-BR\Treinamento.resources.dll

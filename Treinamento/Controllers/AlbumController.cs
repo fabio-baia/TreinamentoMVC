@@ -9,7 +9,7 @@ using Treinamento.Models;
 
 namespace Treinamento.Controllers
 {
-    public class AlbumController : Controller
+    public class AlbumController : BaseController
     {
         private LojaContext db = new LojaContext();
 

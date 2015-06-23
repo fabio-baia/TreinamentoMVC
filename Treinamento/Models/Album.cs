@@ -1,37 +1,39 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Text.RegularExpressions;
+using Treinamento.Resources;
 
 namespace Treinamento.Models
 {
     public class Album
     {
-        [DisplayName("Id")]
+        [Display(ResourceType = typeof(AlbumResources), Name = "Id")]
         public int Id { get; set; }
 
-        [DisplayName("GeneroId")]
+        [Display(ResourceType = typeof(AlbumResources), Name = "GenreId")]
         public int GeneroId { get; set; }
-        
-        [DisplayName("ArtistId")]
+
+        [Display(ResourceType = typeof(AlbumResources), Name = "ArtistId")]
         public int ArtistId { get; set; }
         
-        [DisplayName("Titulo")]
+        [Display(ResourceType = typeof(AlbumResources), Name = "Title")]
         [StringLength(20, ErrorMessage = "20 caracteres é o máximo permitido")]
         [Required(ErrorMessage = "O título é obrigatório")]
         [DataType(DataType.Text)]
         public string Titulo { get; set; }
-        
-        [DisplayName("Valor")]
+
+        [Display(ResourceType = typeof(AlbumResources), Name = "Price")]
         public decimal Valor { get; set; }
         
         [DisplayName("UrlArte")]
         [RegularExpression(@"^http://.*\.(png|jpg)$", ErrorMessage = "Url deve ser uma imagem .PNG ou .JPG")]
         public string UrlArte { get; set; }
-        
-        [DisplayName("Genero")]
+
+        [Display(ResourceType = typeof(AlbumResources), Name = "Genre")]
         public virtual Genero Genero { get; set; }
-        
-        [DisplayName("Artista")]
+
+        [Display(ResourceType = typeof(AlbumResources), Name = "Artist")]
         public virtual Artista Artista { get; set; }
     }
 }
