@@ -180,6 +180,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations\MaxWordsAttribute.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BinderConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />

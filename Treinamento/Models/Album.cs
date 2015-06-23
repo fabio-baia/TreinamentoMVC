@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Treinamento.Annotations;
 using Treinamento.Resources;
 
 namespace Treinamento.Models
@@ -19,6 +20,7 @@ namespace Treinamento.Models
         public int ArtistId { get; set; }
         
         [Display(ResourceType = typeof(AlbumResources), Name = "Title")]
+        [MaxWords(2)]
         [StringLength(20, ErrorMessage = "20 caracteres é o máximo permitido")]
         [Required(ErrorMessage = "O título é obrigatório")]
         [DataType(DataType.Text)]
