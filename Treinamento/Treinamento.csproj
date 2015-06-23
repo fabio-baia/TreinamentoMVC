@@ -212,6 +212,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlbumResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\AlbumResources.pt-BR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlbumResources.pt-BR.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
