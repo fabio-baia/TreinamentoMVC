@@ -64,8 +64,14 @@
     <div class="red"></div>
     <div class="red"></div>
     <div class="clear">
-        <input type="button" value="Mostrar" onclick=" mostrar(); " />
+        <input type="button" value="Mostrar" onclick=" mostrar(); "/>
     </div>
+</div>
+
+<div>
+    <p>No meio do caminho tinha uma pedra</p>
+    <p>nunca me esquecerei</p>
+    <p>Carlos Drumond de Andrade</p>
 </div>
 
 @section scripts
@@ -85,6 +91,11 @@
         $('div.red').click(function() {
             $(this).hide();
         });
+
+
+        $("p:contains(pedra)").css("color", "blue");
+        $("p:contains(nunca)").css("color", "red");
+        $("p:contains('Carlos Drumond de Andrade')").css("float", "right");
     });
 </script>
 }
