@@ -55,10 +55,18 @@
         </tr>
     }
 
-    <input type="button" value="Trocar Cor do Titulo" onclick="alternar();"/>
-     
+    <input type="button" value="Trocar Cor do Titulo" onclick=" alternar(); "/>
 
 </table>
+<div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="clear">
+        <input type="button" value="Mostrar" onclick=" mostrar(); " />
+    </div>
+</div>
 
 @section scripts
 {
@@ -67,8 +75,16 @@
         $("#trocaCor").toggleClass("listrado");
     }
 
+    function mostrar() {
+        $("div").show();
+    }
+
     $(document).ready(function () {
         alert($('tr').size() - 1);
+
+        $('div.red').click(function() {
+            $(this).hide();
+        });
     });
 </script>
 }
@@ -76,6 +92,18 @@
 <style type="text/css">
     h2.listrado {
         background-color: grey;
+    }
+
+    .red {
+        background-color: indianred;
+        color: red;
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+    .clear {
+        clear: both;
     }
 </style>
 
