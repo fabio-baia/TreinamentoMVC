@@ -74,6 +74,16 @@
     <p>Carlos Drumond de Andrade</p>
 </div>
 
+<div>
+    <h1 language="Portuguese">Selecionando Elementos</h1>
+    <h1 language="English">Selecting Elements</h1>
+    <h1 language="German">Auswashien von Element</h1>
+
+    <a href="#" lang="Portuguese">Português</a>
+    <a href="#" lang="English">Inglês</a>
+    <a href="#" lang="German">Alemão</a>
+</div>
+
 @section scripts
 {
 <script type="text/javascript">
@@ -96,6 +106,14 @@
         $("p:contains(pedra)").css("color", "blue");
         $("p:contains(nunca)").css("color", "red");
         $("p:contains('Carlos Drumond de Andrade')").css("float", "right");
+
+        $("[language='German'], [language='English']").hide();
+        $("[language='Portuguese']").hide();
+
+        $("a[lang]").click(function() {
+            $("[language]").hide();
+            $("[language= " + $(this).attr("lang") + "]").show();
+        });
     });
 </script>
 }
