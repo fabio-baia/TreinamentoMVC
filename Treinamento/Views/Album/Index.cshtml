@@ -152,6 +152,7 @@
 <div id="exercise_hora">
     <h3>Exibindo a hora do servidor via ajax request</h3>
     <div id="hora"></div>
+    <input type="button" value="Buscar hora" onclick="buscarHora()" />
 </div>
 
 @section scripts
@@ -266,10 +267,13 @@
             }).css('color', '#fff');
 
 
-            //brincando com ajax
-            $('#exercise_hora #hora').load('@Url.Action("Hora")');
 
         });
+
+        //brincando com ajax
+        function buscarHora() {
+            $('#exercise_hora #hora').load('@Url.Action("Hora")');
+        }
 
         function seleciona(indice) {
             alert($($('#select_exercise p').get(indice)).text());
