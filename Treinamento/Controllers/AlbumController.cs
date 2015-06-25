@@ -61,5 +61,10 @@ namespace Treinamento.Controllers
 
             return View(albums.ToList());
         }
+
+        public string Hora()
+        {
+            return DateTime.Now.ToShortTimeString();
+        }
     }
 }

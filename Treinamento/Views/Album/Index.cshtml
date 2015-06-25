@@ -149,6 +149,11 @@
 
 <div id="log"></div>
 
+<div id="exercise_hora">
+    <h3>Exibindo a hora do servidor via ajax request</h3>
+    <div id="hora"></div>
+</div>
+
 @section scripts
 {
     <script type="text/javascript">
@@ -260,6 +265,9 @@
                 height: '100%'
             }).css('color', '#fff');
 
+
+            //brincando com ajax
+            $('#exercise_hora #hora').load('@Url.Action("Hora")');
 
         });
 
