@@ -48,14 +48,14 @@
                 @Html.DisplayFor(modelItem => item.UrlArte)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
-                @Html.ActionLink("Details", "Details", new {id = item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
     }
 
-    <input type="button" value="Trocar Cor do Titulo" onclick=" alternar(); "/>
+    <input type="button" value="Trocar Cor do Titulo" onclick=" alternar(); " />
 
 </table>
 <div>
@@ -64,7 +64,7 @@
     <div class="red"></div>
     <div class="red"></div>
     <div class="clear">
-        <input type="button" value="Mostrar" onclick=" mostrar(); "/>
+        <input type="button" value="Mostrar" onclick=" mostrar(); " />
     </div>
 </div>
 
@@ -90,49 +90,70 @@
     <span class="tipo">Span 2</span>
 </div>
 
+<div>
+    <hr />
+    <p>Usando jquery para selecionar checkboxes</p>
+    <label>Checar todos<input type="checkbox" value="" id="principal" /></label><br />
+
+    <label>Opção 1<input type="checkbox" value="1" /></label><br />
+    <label>Opção 2<input type="checkbox" value="2" /></label><br />
+    <label>Opção 3<input type="checkbox" value="3" /></label><br />
+    <label>Opção 4<input type="checkbox" value="4" /></label><br />
+    <label>Opção 5<input type="checkbox" value="5" /></label><br />
+
+</div>
+
 @section scripts
 {
-<script type="text/javascript">
-    function alternar() {
-        $("#trocaCor").toggleClass("listrado");
-    }
+    <script type="text/javascript">
+        function alternar() {
+            $("#trocaCor").toggleClass("listrado");
+        }
 
-    function mostrar() {
-        $("div").show();
-    }
+        function mostrar() {
+            $("div").show();
+        }
 
-    $(document).ready(function () {
-        alert($('tr').size() - 1);
+        $(document).ready(function () {
+            alert($('tr').size() - 1);
 
-        $('div.red').click(function() {
-            $(this).hide();
-        });
+            $('div.red').click(function () {
+                $(this).hide();
+            });
 
 
-        $("p:contains(pedra)").css("color", "blue");
-        $("p:contains(nunca)").css("color", "red");
-        $("p:contains('Carlos Drumond de Andrade')").css("float", "right");
+            $("p:contains(pedra)").css("color", "blue");
+            $("p:contains(nunca)").css("color", "red");
+            $("p:contains('Carlos Drumond de Andrade')").css("float", "right");
 
-        $("[language='German'], [language='English']").hide();
-        $("[language='Portuguese']").hide();
+            $("[language='German'], [language='English']").hide();
+            $("[language='Portuguese']").hide();
 
-        $("a[lang]").click(function() {
-            $("[language]").hide();
-            $("[language= " + $(this).attr("lang") + "]").show();
-        });
+            $("a[lang]").click(function () {
+                $("[language]").hide();
+                $("[language= " + $(this).attr("lang") + "]").show();
+            });
 
-        $('.tipo').each(function() {
-            if ($(this).is('div')) {
-                $(this).css({
-                    margin: '5px',
-                    width: '100px',
-                    height: '100px',
-                    backgroundColor: 'green'
+            $('.tipo').each(function () {
+                if ($(this).is('div')) {
+                    $(this).css({
+                        margin: '5px',
+                        width: '100px',
+                        height: '100px',
+                        backgroundColor: 'green'
+                    });
+                }
+            });
+
+            $('#principal').click(function () {
+                var statusAtual = $(this).is(':checked');
+
+                $('[type=checkbox]').not($(this)).each(function () {
+                    $(this).prop('checked', statusAtual);
                 });
-            }
+            });
         });
-    });
-</script>
+    </script>
 }
 
 <style type="text/css">
@@ -148,8 +169,8 @@
         height: 100px;
         margin: 10px;
     }
+
     .clear {
         clear: both;
     }
 </style>
-
