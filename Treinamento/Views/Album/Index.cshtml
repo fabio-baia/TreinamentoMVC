@@ -91,16 +91,29 @@
 </div>
 
 <div>
-    <hr />
+    <hr/>
     <p>Usando jquery para selecionar checkboxes</p>
-    <label>Checar todos<input type="checkbox" value="" id="principal" /></label><br />
+    <label>Checar todos<input type="checkbox" value="" id="principal"/></label><br/>
 
-    <label>Opção 1<input type="checkbox" value="1" /></label><br />
-    <label>Opção 2<input type="checkbox" value="2" /></label><br />
-    <label>Opção 3<input type="checkbox" value="3" /></label><br />
-    <label>Opção 4<input type="checkbox" value="4" /></label><br />
-    <label>Opção 5<input type="checkbox" value="5" /></label><br />
+    <label>Opção 1<input type="checkbox" value="1"/></label><br/>
+    <label>Opção 2<input type="checkbox" value="2"/></label><br/>
+    <label>Opção 3<input type="checkbox" value="3"/></label><br/>
+    <label>Opção 4<input type="checkbox" value="4"/></label><br/>
+    <label>Opção 5<input type="checkbox" value="5"/></label><br/>
 
+</div>
+
+<div id="select_exercise">
+    <h3>Usando jQuery para popular select com html dos paragrafos</h3>
+    <hr/>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <p><span>Paragrafo 4</span></p>
+
+    <select id="elemento"></select>
+
+    <input type="button" value="Selecionando Elemento" onclick=" seleciona($('#elemento').val()) "/>
 </div>
 
 @section scripts
@@ -152,7 +165,18 @@
                     $(this).prop('checked', statusAtual);
                 });
             });
+
+            $('#select_exercise p').each(function (i) {
+                $('#elemento').append(new Option($(this).html(), i));
+            });
+
+
         });
+
+        function seleciona(indice) {
+            alert($($('#select_exercise p').get(indice)).text());
+        }
+
     </script>
 }
 
