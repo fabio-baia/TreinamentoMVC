@@ -134,6 +134,10 @@
     Exemplo Unbind, clique para testar
 </div>
 
+<div id="unbind2">
+    Exemplo sem unbind, clique para testar
+</div>
+
 @section scripts
 {
     <script type="text/javascript">
@@ -201,8 +205,18 @@
                 $(this).unbind(event);
             });
 
+            $('div#unbind2').one('click', function (event) {
+                alert('Este também será mostrado apenas uma vez!');
+            });
+
             $('div#unbind').css({
                 backgroundColor: 'yellowgreen',
+                width: '100%',
+                height: '100%'
+            }).css('color', 'blue');
+
+            $('div#unbind2').css({
+                backgroundColor: 'yellow',
                 width: '100%',
                 height: '100%'
             }).css('color', 'blue');
