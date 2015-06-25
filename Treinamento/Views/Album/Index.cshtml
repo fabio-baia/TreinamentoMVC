@@ -124,6 +124,11 @@
     <p>Você não ganhou!</p>
 </div>
 
+<div id="exercise_texto_inicio_fim">
+    <h3>Adicionando texto antes e depois do alvo</h3>
+    <p id="alvo">esse é o alvo</p>
+</div>
+
 @section scripts
 {
     <script type="text/javascript">
@@ -181,6 +186,9 @@
 
             $('#exercise_contains_append p:contains("Você ganhou")').append("<strong> R$ 1,00 </strong>");
 
+
+            $('#exercise_texto_inicio_fim #alvo').before('<p>Novo elemento antes</p>');
+            $('#exercise_texto_inicio_fim #alvo').after('<p>Novo elemento depois</p>');
         });
 
         function seleciona(indice) {
