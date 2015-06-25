@@ -129,6 +129,11 @@
     <p id="alvo">esse é o alvo</p>
 </div>
 
+
+<div id="unbind">
+    Exemplo Unbind, clique para testar
+</div>
+
 @section scripts
 {
     <script type="text/javascript">
@@ -189,6 +194,18 @@
 
             $('#exercise_texto_inicio_fim #alvo').before('<p>Novo elemento antes</p>');
             $('#exercise_texto_inicio_fim #alvo').after('<p>Novo elemento depois</p>');
+
+
+            $('div#unbind').click(function(event) {
+                alert('Este será mostrado apenas uma vez!');
+                $(this).unbind(event);
+            });
+
+            $('div#unbind').css({
+                backgroundColor: 'yellowgreen',
+                width: '100%',
+                height: '100%'
+            }).css('color', 'blue');
         });
 
         function seleciona(indice) {
