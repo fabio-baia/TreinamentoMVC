@@ -83,6 +83,12 @@
     <a href="#" lang="English">Inglês</a>
     <a href="#" lang="German">Alemão</a>
 </div>
+<div>
+    <div class="tipo">Div 1</div>
+    <span class="tipo">Span 1</span>
+    <div class="tipo">Div 2</div>
+    <span class="tipo">Span 2</span>
+</div>
 
 @section scripts
 {
@@ -113,6 +119,17 @@
         $("a[lang]").click(function() {
             $("[language]").hide();
             $("[language= " + $(this).attr("lang") + "]").show();
+        });
+
+        $('.tipo').each(function() {
+            if ($(this).is('div')) {
+                $(this).css({
+                    margin: '5px',
+                    width: '100px',
+                    height: '100px',
+                    backgroundColor: 'green'
+                });
+            }
         });
     });
 </script>
