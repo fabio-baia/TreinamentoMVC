@@ -3,7 +3,7 @@ using Treinamento.Core.Model;
 
 namespace Treinamento.Core.Context
 {
-    public class Context : DbContext
+    public class TreinamentoContext : DbContext
     {
         public DbSet<Pessoa> Pessoas { get; set; }
     }
