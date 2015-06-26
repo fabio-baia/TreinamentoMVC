@@ -155,10 +155,20 @@
     <input type="button" value="Buscar hora" onclick=" buscarHora() "/>
 </div>
 
+<div id="exercicio_plugin_jquery">
+    <p>Texto não vai ficar azul</p>
+    <p class="ficaAzul">Texto vai ficar azul</p>
+    <p>Texto não vai ficar azul</p>
+    <p class="ficaAzul">Texto vai ficar azul</p>
+</div>
+
 
 @section scripts
 {
+    <script src="@Url.Content("~/Scripts/jquery.tornarAzul.js")"></script>
     <script type="text/javascript">
+
+
         function alternar() {
             $("#trocaCor").toggleClass("listrado");
         }
@@ -273,6 +283,9 @@
                     alert('Erro: ' + data.mensagem);
                 }
             });
+
+            $('#exercicio_plugin_jquery p.ficaAzul').tornarAzul();
+
         });
 
 
@@ -285,7 +298,7 @@
             alert($($('#select_exercise p').get(indice)).text());
         }
 
-</script>
+    </script>
 }
 
 <style type="text/css">
