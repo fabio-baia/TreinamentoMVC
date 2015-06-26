@@ -3,21 +3,23 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
+using Microsoft.Practices.ServiceLocation;
 using Treinamento.Core.Context;
 
 namespace Treinamento.Core.Model.Repository.Common
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity>, IDisposable where TEntity : class
     {
         private readonly TreinamentoContext _context;
         private readonly IDbSet<TEntity> _dbSet;
         private DbContextTransaction _dbContextTransaction;
 
-        public Repository(TreinamentoContext context, IDbSet<TEntity> dbSet)
+        public Repository()
         {
-            _context = context;
-            _dbSet = dbSet;
+            _context = ServiceLocator.Current.GetInstance<TreinamentoContext>();
+            _dbSet = _context.Set<TEntity>();
         }
+
 
         protected TreinamentoContext Context {
             get { return _context;}
