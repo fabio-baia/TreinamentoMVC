@@ -152,8 +152,9 @@
 <div id="exercise_hora">
     <h3>Exibindo a hora do servidor via ajax request</h3>
     <div id="hora"></div>
-    <input type="button" value="Buscar hora" onclick="buscarHora()" />
+    <input type="button" value="Buscar hora" onclick=" buscarHora() "/>
 </div>
+
 
 @section scripts
 {
@@ -166,10 +167,10 @@
             $("div").show();
         }
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             alert($('tr').size() - 1);
 
-            $('div.red').click(function () {
+            $('div.red').click(function() {
                 $(this).hide();
             });
 
@@ -181,12 +182,12 @@
             $("[language='German'], [language='English']").hide();
             $("[language='Portuguese']").hide();
 
-            $("a[lang]").click(function () {
+            $("a[lang]").click(function() {
                 $("[language]").hide();
                 $("[language= " + $(this).attr("lang") + "]").show();
             });
 
-            $('.tipo').each(function () {
+            $('.tipo').each(function() {
                 if ($(this).is('div')) {
                     $(this).css({
                         margin: '5px',
@@ -197,15 +198,15 @@
                 }
             });
 
-            $('#principal').click(function () {
+            $('#principal').click(function() {
                 var statusAtual = $(this).is(':checked');
 
-                $('[type=checkbox]').not($(this)).each(function () {
+                $('[type=checkbox]').not($(this)).each(function() {
                     $(this).prop('checked', statusAtual);
                 });
             });
 
-            $('#select_exercise p').each(function (i) {
+            $('#select_exercise p').each(function(i) {
                 $('#elemento').append(new Option($(this).html(), i));
             });
 
@@ -222,7 +223,7 @@
                 $(this).unbind(event);
             });
 
-            $('div#unbind2').one('click', function (event) {
+            $('div#unbind2').one('click', function(event) {
                 alert('Este também será mostrado apenas uma vez!');
             });
 
@@ -243,7 +244,7 @@
             $('table tr:even').not(':first').css('background-color', '#cdcdcd');
             var corAntiga;
 
-            $('table#exercicio_captura_evento tr').not(':first').hover(function () {
+            $('table#exercicio_captura_evento tr').not(':first').hover(function() {
                 corAntiga = $(this).css('background-color');
                 $(this).css('background-color', 'yellow').css('cursor', 'pointer');
             }, function() {
@@ -254,7 +255,7 @@
             $(document).keyup(function() {
                 if (event.keyCode == 13) {
                     alert('ENTER clicado');
-                }else if (event.keyCode == 27) {
+                } else if (event.keyCode == 27) {
                     alert('ESC clicado');
                 } else {
                     $('#log').append(String.fromCharCode(event.keyCode) + ' - ');
@@ -267,8 +268,13 @@
             }).css('color', '#fff');
 
 
-
+            $.get('@Url.Action("Hora")', { erro: false }, function(data) {
+                if (!data.Status) {
+                    alert('Erro: ' + data.mensagem);
+                }
+            });
         });
+
 
         //brincando com ajax
         function buscarHora() {
@@ -279,7 +285,7 @@
             alert($($('#select_exercise p').get(indice)).text());
         }
 
-    </script>
+</script>
 }
 
 <style type="text/css">

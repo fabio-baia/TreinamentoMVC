@@ -62,9 +62,20 @@ namespace Treinamento.Controllers
             return View(albums.ToList());
         }
 
-        public string Hora()
+        public ActionResult Hora(bool erro = false)
         {
-            return DateTime.Now.ToShortTimeString();
+            if (erro)
+                return Json(new
+                {
+                    Status = false, 
+                    Mensagem = "Algum erro!"
+                }, JsonRequestBehavior.AllowGet);
+
+            return Json(new
+            {
+                Hora = DateTime.Now.ToShortTimeString(), 
+                Status = true
+            }, JsonRequestBehavior.AllowGet);
         }
     }
 }
