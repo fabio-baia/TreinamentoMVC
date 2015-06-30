@@ -31,7 +31,7 @@ namespace Treinamento.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Pessoa pessoa)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return View(pessoa);
 
             _pessoaService.Save(pessoa);
