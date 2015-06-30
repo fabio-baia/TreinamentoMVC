@@ -1,0 +1,26 @@
+﻿@model Treinamento.Core.Model.Pessoa
+
+@{
+    ViewBag.Title = "Pessoa";
+}
+
+<h2>Delete</h2>
+
+<h3>Você tem certeza que deseja remover esse registro?</h3>
+<fieldset>
+    <legend>Pessoa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Voltar", "Index")
+    </p>
+}

@@ -355,6 +355,7 @@
     <Content Include="Views\Genero\List.cshtml" />
     <Content Include="Views\Pessoa\Create.cshtml" />
     <Content Include="Views\Pessoa\Index.cshtml" />
+    <Content Include="Views\Pessoa\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
