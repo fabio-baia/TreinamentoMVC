@@ -209,6 +209,7 @@
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HistoricoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\LogActionFilter.cs" />
@@ -368,6 +369,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AlbumResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treinamento.Core\Treinamento.Core.csproj">
+      <Project>{c9a1c996-a191-4bd0-a35d-810585575bcc}</Project>
+      <Name>Treinamento.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
