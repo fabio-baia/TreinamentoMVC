@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Treinamento.Core</RootNamespace>
     <AssemblyName>Treinamento.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +68,9 @@
     <Compile Include="Model\Repository\Interface\IPessoaRepository.cs" />
     <Compile Include="Model\Repository\PessoaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Interfaces\IPessoaService.cs" />
+    <Compile Include="Service\Common\IService.cs" />
+    <Compile Include="Service\PessoaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
