@@ -1,3 +1,5 @@
+using Treinamento.Core.InversionControl;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Treinamento.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Treinamento.App_Start.NinjectWebCommon), "Stop")]
 
@@ -39,7 +41,8 @@ namespace Treinamento.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            var ioc = new IoC();
+            var kernel = ioc.Kernel;
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
