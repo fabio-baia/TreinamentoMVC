@@ -79,6 +79,7 @@ namespace Treinamento.Core.Model.Repository.Common
 
         public void Commit()
         {
+            _context.SaveChanges();
             _dbContextTransaction.Commit();
         }
 
