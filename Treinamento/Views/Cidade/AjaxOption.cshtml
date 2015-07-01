@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Treinamento.Core.Model.Cidade>
+
+@foreach (var cidade in Model)
+{
+    <option value="@cidade.Id">@cidade.Nome</option>   
+}
