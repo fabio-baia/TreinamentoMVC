@@ -71,6 +71,7 @@
     <Compile Include="Model\Repository\Interface\ICidadeRepository.cs" />
     <Compile Include="Model\Repository\Interface\IPessoaRepository.cs" />
     <Compile Include="Model\Repository\PessoaRepository.cs" />
+    <Compile Include="Model\Telefone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Interfaces\ICidadeService.cs" />
     <Compile Include="Service\Interfaces\IPessoaService.cs" />
