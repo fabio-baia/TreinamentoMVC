@@ -4,7 +4,7 @@
             var uf = $(this).val();
 
             $.post(urlCidade, {uf: uf}, function(options) {
-                $("#" + idCidade.html(options));
+                $("#" + idCidade).html(options);
             });
         });
     }
