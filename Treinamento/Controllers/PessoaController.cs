@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using Treinamento.Core.Model;
 using Treinamento.Core.Service.Interfaces;
 
@@ -27,10 +29,19 @@ namespace Treinamento.Controllers
 
         public ActionResult Create(int id = 0)
         {
-            ViewBag.Estados = new SelectList(_cidadeService.ListarEstados());
-            ViewBag.IdCidade = new SelectList(new List<Cidade>());
+            var pessoa = _pessoaService.Find(id) ?? new Pessoa();
 
-            return View(_pessoaService.Find(id) ?? new Pessoa());
+            DropDown(pessoa);
+
+            return View(pessoa);
+        }
+
+        private void DropDown(Pessoa pessoa)
+        {
+            var cidades = pessoa.Cidade == null ? new List<Cidade>() : _cidadeService.Query(q => q.Uf == pessoa.Cidade.Uf).ToList();
+            
+            ViewBag.Estados = new SelectList(_cidadeService.ListarEstados(), pessoa.Cidade.IfNotNull(q => q.Uf));
+            ViewBag.IdCidade = new SelectList(cidades, "Id", "Nome", pessoa.IdCidade);
         }
 
         [HttpPost]
@@ -38,7 +49,10 @@ namespace Treinamento.Controllers
         public ActionResult Create(Pessoa pessoa)
         {
             if (!ModelState.IsValid)
+            {
+                DropDown(pessoa);
                 return View(pessoa);
+            }
 
             _pessoaService.Save(pessoa);
             return RedirectToAction("Index");
