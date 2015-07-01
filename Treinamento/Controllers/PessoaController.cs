@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -21,7 +22,7 @@ namespace Treinamento.Controllers
 
         public ActionResult Index()
         {
-            return View(_pessoaService.All());
+            return View(_pessoaService.All().Include(c => c.Cidade));
         }
 
         public ActionResult Create(int id = 0)
