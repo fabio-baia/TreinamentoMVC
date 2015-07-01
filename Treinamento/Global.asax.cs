@@ -10,6 +10,7 @@ using System.Web.Routing;
 using Treinamento.App_Start;
 using Treinamento.Context;
 using Treinamento.Context.Initializer;
+using Treinamento.Core.Context.Initializer;
 
 namespace Treinamento
 {
@@ -21,6 +22,8 @@ namespace Treinamento
         protected void Application_Start()
         {
             Database.SetInitializer(new LojaInitializer());
+            Database.SetInitializer(new TreinamentoInitializer());
+
             AreaRegistration.RegisterAllAreas();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
