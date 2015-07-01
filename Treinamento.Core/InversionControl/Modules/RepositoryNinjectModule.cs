@@ -9,6 +9,7 @@ namespace Treinamento.Core.InversionControl.Modules
         public override void Load()
         {
             Bind<IPessoaRepository>().To<PessoaRepository>();
+            Bind<ICidadeRepository>().To<CidadeRepository>();
         }
     }
 }

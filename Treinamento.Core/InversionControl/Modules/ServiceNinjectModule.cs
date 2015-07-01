@@ -9,6 +9,7 @@ namespace Treinamento.Core.InversionControl.Modules
         public override void Load()
         {
             Bind<IPessoaService>().To<PessoaService>();
+            Bind<ICidadeService>().To<CidadeService>();
         }
     }
 }
