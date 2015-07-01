@@ -27,6 +27,7 @@ namespace Treinamento.Controllers
         public ActionResult Create(int id = 0)
         {
             ViewBag.Estados = new SelectList(_cidadeService.ListarEstados());
+            ViewBag.IdCidade = new SelectList(new List<Cidade>());
 
             return View(_pessoaService.Find(id) ?? new Pessoa());
         }
