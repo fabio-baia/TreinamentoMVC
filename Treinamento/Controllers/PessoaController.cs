@@ -11,10 +11,12 @@ namespace Treinamento.Controllers
     public class PessoaController : Controller
     {
         private readonly IPessoaService _pessoaService;
+        private readonly ICidadeService _cidadeService;
 
-        public PessoaController(IPessoaService pessoaService)
+        public PessoaController(IPessoaService pessoaService, ICidadeService cidadeService)
         {
             _pessoaService = pessoaService;
+            _cidadeService = cidadeService;
         }
 
         public ActionResult Index()
@@ -24,6 +26,8 @@ namespace Treinamento.Controllers
 
         public ActionResult Create(int id = 0)
         {
+            ViewBag.Estados = new SelectList(_cidadeService.ListarEstados());
+
             return View(_pessoaService.Find(id) ?? new Pessoa());
         }
 

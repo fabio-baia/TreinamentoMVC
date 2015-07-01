@@ -18,6 +18,13 @@
         </div>
 
         <div class="form-group">
+            @Html.Label("Estados", "Estado")
+            @Html.DropDownList("Estados")
+            @Html.Label("IdCidade", "IdCidade")
+            @Html.DropDownList("IdCidade")
+        </div>
+
+        <div class="form-group">
             <div>
                 @Html.ActionLink("Voltar", "Index")
                 <input type="submit" value="Salvar" class="btn btn-submit"/>
