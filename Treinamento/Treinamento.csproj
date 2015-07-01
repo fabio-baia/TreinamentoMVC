@@ -359,6 +359,7 @@
     <Content Include="Views\Pessoa\Index.cshtml" />
     <Content Include="Views\Pessoa\Delete.cshtml" />
     <Content Include="Views\Cidade\AjaxOption.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Cidade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
