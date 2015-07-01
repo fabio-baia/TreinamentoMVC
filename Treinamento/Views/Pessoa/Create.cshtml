@@ -3,6 +3,19 @@
 @{
     ViewBag.Title = "Pessoa";
 }
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/Pessoa/scriptCidade.js")"></script>
+    <script>
+        var scriptCidade;
+        var urlCidade = '@Url.Action("AjaxOption", "Cidade")';
+
+        $(function() {
+            scriptCidade = new scriptCidade("Estados", "IdCidade", urlCidade);
+            scriptCidade.iniciar();
+        });
+    </script>
+}
 
 <h2>Create</h2>
 
