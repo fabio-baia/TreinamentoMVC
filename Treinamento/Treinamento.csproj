@@ -287,6 +287,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\jquery.tornarAzul.js" />
     <Content Include="Scripts\Pessoa\scriptCidade.js" />
+    <Content Include="Scripts\Pessoa\scriptTelefone.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

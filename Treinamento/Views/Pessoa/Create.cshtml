@@ -5,14 +5,39 @@
 }
 @section scripts
 {
+    <script src="@Url.Content("~/Scripts/Pessoa/scriptTelefone.js")"></script>
     <script src="@Url.Content("~/Scripts/Pessoa/scriptCidade.js")"></script>
     <script>
-        var scriptCidade;
+        var scriptCidade, scriptTelefone;
+
+        var idPessoa = @Model.Id;
+            
+        //Cidade
         var urlCidade = '@Url.Action("AjaxOption", "Cidade")';
 
-        $(function() {
+        //Telefone
+        var urlTelefoneAdicionar = '@Url.Action("AjaxAdd", "Telefone")';
+        var urlTelefoneRemover = '@Url.Action("AjaxRemove", "Telefone")';
+        var urlTelefoneListar = '@Url.Action("AjaxList", "Telefone")';
+
+        function abrirDialogTelefone() {
+            scriptTelefone.abrirDialog();
+        }
+
+        function excluirTelefone(id) {
+            scriptTelefone.excluir(id);
+        }
+
+        function alterarTelefone(id, numero) {
+            scriptTelefone.alterar(id, numero);
+        }
+
+        $(function () {
             scriptCidade = new ScriptCidade("Estados", "IdCidade", urlCidade);
             scriptCidade.iniciar();
+
+            scriptTelefone = new ScriptTelefone(idPessoa, urlTelefoneAdicionar, urlTelefoneRemover, urlTelefoneListar);
+            scriptTelefone.iniciar();
         });
     </script>
 }
@@ -40,7 +65,7 @@
         <div class="form-group">
             <div>
                 @Html.ActionLink("Voltar", "Index")
-                <input type="submit" value="Salvar" class="btn btn-submit"/>
+                <input type="submit" value="Salvar" class="btn btn-submit" />
             </div>
         </div>
     </div>
