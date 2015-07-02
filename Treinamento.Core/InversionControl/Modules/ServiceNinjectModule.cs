@@ -10,6 +10,7 @@ namespace Treinamento.Core.InversionControl.Modules
         {
             Bind<IPessoaService>().To<PessoaService>();
             Bind<ICidadeService>().To<CidadeService>();
+            Bind<ITelefoneService>().To<TelefoneService>();
         }
     }
 }

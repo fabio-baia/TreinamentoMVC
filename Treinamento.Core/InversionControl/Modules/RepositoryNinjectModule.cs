@@ -10,6 +10,7 @@ namespace Treinamento.Core.InversionControl.Modules
         {
             Bind<IPessoaRepository>().To<PessoaRepository>();
             Bind<ICidadeRepository>().To<CidadeRepository>();
+            Bind<ITelefoneRepository>().To<TelefoneRepository>();
         }
     }
 }
