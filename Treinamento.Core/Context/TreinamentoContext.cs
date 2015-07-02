@@ -7,6 +7,7 @@ namespace Treinamento.Core.Context
     {
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
+        public DbSet<Telefone> Telefones { get; set; }
 
         public TreinamentoContext()
             : base("DefaultConnection")
