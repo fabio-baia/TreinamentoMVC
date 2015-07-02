@@ -73,6 +73,7 @@
     <Compile Include="Model\Repository\PessoaRepository.cs" />
     <Compile Include="Model\Telefone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Common\Service.cs" />
     <Compile Include="Service\Interfaces\ICidadeService.cs" />
     <Compile Include="Service\Interfaces\IPessoaService.cs" />
     <Compile Include="Service\Common\IService.cs" />
