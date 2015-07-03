@@ -4,8 +4,8 @@
     var campoId = $("#TelefoneId");
     var campoNumero = $("#TelefoneNumero");
 
-    var tab = ("#tab-telefone");
-    var form = ("form", dialog);
+    var tab = $("#tab-telefone");
+    var form = $("form", dialog);
 
     this.abrirDialog = function () {
         dialog.dialog("open");
@@ -22,7 +22,7 @@
     }
 
     function adicionar() {
-        if (form.valid())
+        if (!form.valid())
             return;
 
         $.post(urlAdicionar, {
