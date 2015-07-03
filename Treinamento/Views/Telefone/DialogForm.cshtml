@@ -1,0 +1,21 @@
+﻿@model Treinamento.Core.Model.Telefone
+           
+<div>
+    <form>
+        <div class="form-horizontal">
+
+            @Html.HiddenFor(model => Model.Id, new { id="TelefoneId"})
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Numero, new {@for = "TelefoneNumero"})
+                @Html.TextBoxFor(model => model.Numero, new
+                {
+                    id = "TelefoneNumero",
+                    @class = "form-control required"
+                })
+            </div>
+            <input type="text" value="" />
+        </div>
+    </form>
+</div>
+
