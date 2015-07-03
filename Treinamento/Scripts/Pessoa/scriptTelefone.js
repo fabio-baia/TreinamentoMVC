@@ -40,7 +40,7 @@
         });
     }
 
-    this.excluir = function() {
+    this.excluir = function(id) {
         if (confirm("Você tem certeza que deseja excluir esse item?"))
             $.get(urlRemover, {Id:id}, function(data) {
                 atualizar();
