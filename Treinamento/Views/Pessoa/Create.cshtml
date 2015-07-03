@@ -11,7 +11,7 @@
         var scriptCidade, scriptTelefone;
 
         var idPessoa = @Model.Id;
-            
+
         //Cidade
         var urlCidade = '@Url.Action("AjaxOption", "Cidade")';
 
@@ -65,8 +65,17 @@
         <div class="form-group">
             <div>
                 @Html.ActionLink("Voltar", "Index")
-                <input type="submit" value="Salvar" class="btn btn-submit" />
+                <input type="submit" value="Salvar" class="btn btn-default" />
             </div>
         </div>
+
+        <div id="tab-telefone">
+            @Html.Action("AjaxList", "Telefone", new { Model.Id })
+        </div>
+
     </div>
 }
+
+<div id="dialogTelefone">
+    @Html.Action("DialogForm", "Telefone")
+</div>

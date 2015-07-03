@@ -18,7 +18,7 @@
     }
 
     function atualizar() {
-        tab.load(urlListar);
+        tab.load(urlListar, {id: idPessoa});
     }
 
     function adicionar() {
