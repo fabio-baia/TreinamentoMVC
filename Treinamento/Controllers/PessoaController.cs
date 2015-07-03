@@ -48,6 +48,8 @@ namespace Treinamento.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Pessoa pessoa)
         {
+            var isNew = pessoa.Id == 0;
+
             if (!ModelState.IsValid)
             {
                 DropDown(pessoa);
@@ -55,7 +57,7 @@ namespace Treinamento.Controllers
             }
 
             _pessoaService.Save(pessoa);
-            return RedirectToAction("Index");
+            return isNew ? RedirectToAction("Create", new {pessoa.Id}) : RedirectToAction("Index");
         }
         
         public ActionResult Delete(int id)
