@@ -69,9 +69,12 @@
             </div>
         </div>
 
-        <div id="tab-telefone">
-            @Html.Action("AjaxList", "Telefone", new { Model.Id })
-        </div>
+        @if (Model.Id > 0)
+        {
+            <div id="tab-telefone">
+                @Html.Action("AjaxList", "Telefone", new { Model.Id })
+            </div>
+        }
 
     </div>
 }
