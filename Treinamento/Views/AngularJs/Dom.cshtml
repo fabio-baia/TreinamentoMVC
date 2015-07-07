@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app>
+    <p>
+        <button ng-disabled="switch">Clique em mim</button>
+    </p>
+
+    <p>
+        <input type="checkbox" ng-model="switch" />
+    </p>
+
+    <p ng-show="true">Estou visível</p>
+    <p ng-show="false">Estou invisível</p>
+
+</body>
+</html>

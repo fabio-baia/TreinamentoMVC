@@ -33,5 +33,10 @@ namespace Treinamento.Controllers
         {
             return View();
         }
+
+        public ActionResult Dom()
+        {
+            return View();
+        }
     }
 }
