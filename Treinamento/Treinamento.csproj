@@ -348,6 +348,7 @@
     <Content Include="Views\AngularJs\Expression.cshtml" />
     <Content Include="Views\AngularJs\Application.cshtml" />
     <Content Include="Views\AngularJs\Repetindo.cshtml" />
+    <Content Include="Views\AngularJs\Filter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

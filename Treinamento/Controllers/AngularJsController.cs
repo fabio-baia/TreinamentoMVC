@@ -23,5 +23,10 @@ namespace Treinamento.Controllers
         {
             return View();
         }
+
+        public ActionResult Filter()
+        {
+            return View();
+        }
     }
 }

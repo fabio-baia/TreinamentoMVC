@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app ng-init="primeiroNome='Fabio'; cidades=[{nome: 'Maringá'},{nome: 'Anta Gorda'}]">
+    <p>Uppercase: {{primeiroNome | uppercase}}</p>
+    <p>Lowercase: {{primeiroNome | lowercase}}</p>
+
+    <input type="number" ng-model="quantidade" />
+    <input type="number" ng-model="valor" />
+
+    <p>Total = {{quantidade * valor | currency: 'R$ '}}</p>
+
+    <ul>
+        <li ng-repeat="cidade in cidades | orderBy: 'nome'">{{cidade.nome}}</li>
+    </ul>
+
+    <p>
+        <input type="search" ng-model="busca" placeholder="Busca de cidade" />
+        <ul>
+            <li ng-repeat="cidade in cidades | filter:busca | orderBy: 'nome'">{{cidade.nome | uppercase}}</li>
+        </ul>
+    </p>
+</body>
+</html>
