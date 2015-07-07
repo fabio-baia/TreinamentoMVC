@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app ng-init="quantidade=1;valor=5;pessoa={primeiroNome: 'Joselito', ultimoNome: 'Silva'}">
+    <p>2 + 2 = {{2+2}}</p>
+    <p>Total:{{quantidade + valor}}</p>
+    <p>Total <span ng-bind="quantidade * valor"></span></p>
+    <p>Nome:{{pessoa.primeiroNome}}</p>
+    <p>O nome é <span ng-bind="pessoa.ultimoNome"></span></p>
+
+</body>
+</html>

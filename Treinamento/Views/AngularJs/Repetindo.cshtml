@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app>
+
+    <div ng-init="nomes=['Fabio', 'Flavio', 'Maria', 'Paulo']">
+        <ul>
+            <li ng-repeat="nome in nomes">{{nome}}</li>
+        </ul>
+    </div>
+
+    <ul ng-init="cidades=[{nome: 'Maringá', uf: 'PR'}, {nome: 'Anta Gorda', uf: 'RS'}]">
+        <li ng-repeat="cidade in cidades">{{cidade.nome + ' - ' + cidade.uf}}</li>
+    </ul>
+</body>
+</html>
