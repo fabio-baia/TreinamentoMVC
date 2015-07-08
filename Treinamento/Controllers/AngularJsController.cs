@@ -38,5 +38,15 @@ namespace Treinamento.Controllers
         {
             return View();
         }
+
+        public ActionResult Validation()
+        {
+            return View();
+        }
+
+        public ActionResult Aba()
+        {
+            return View();
+        }
     }
 }
