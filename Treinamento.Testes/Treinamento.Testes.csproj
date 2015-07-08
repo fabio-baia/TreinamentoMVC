@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -50,9 +52,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controllers\CidadeControllerTest.cs" />
+    <Compile Include="Factory\CidadeFactory.cs" />
     <Compile Include="FibonnaciTeste.cs" />
     <Compile Include="PluralTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\InMemoryCidadeServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treinamento.Core\Treinamento.Core.csproj">
+      <Project>{c9a1c996-a191-4bd0-a35d-810585575bcc}</Project>
+      <Name>Treinamento.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treinamento\Treinamento.csproj">
+      <Project>{A8231683-F274-47AC-8BD2-1A613E869E7B}</Project>
+      <Name>Treinamento</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

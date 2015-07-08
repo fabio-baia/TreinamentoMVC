@@ -273,6 +273,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\Cidade\cidadeController.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -353,6 +354,7 @@
     <Content Include="Views\AngularJs\Dom.cshtml" />
     <Content Include="Views\AngularJs\Validation.cshtml" />
     <Content Include="Views\AngularJs\Aba.cshtml" />
+    <None Include="Views\Cidade\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
