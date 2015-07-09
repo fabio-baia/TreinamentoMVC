@@ -11,17 +11,17 @@ namespace Treinamento.Controllers
 
         public ActionResult List()
         {
-            return View();
+            return PartialView();
         }
 
         public ActionResult Delete()
         {
-            return View();
+            return PartialView();
         }
 
         public ActionResult Edit()
         {
-            return View();
+            return PartialView();
         }
     }
 }
