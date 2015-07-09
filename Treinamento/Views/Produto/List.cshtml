@@ -1,0 +1,29 @@
+﻿<div>
+    <a href="#/create" class="btn btn-info">Novo</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Ativo</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in Produtos">
+            <td>{{item.Id}}</td>
+            <td>{{item.Nome}}</td>
+            <td>{{item.Valor | number:2}}</td>
+            <td>
+                <span class="label" ng-class="{true: 'label-success', false: 'label-danger', '': 'hidden''}[item.Ativo]">
+                    {{item.Ativo? 'Ativo' : 'Descontinuado'}}
+                </span>
+            </td>
+            <td>
+                <a href="#/edit/{{item.Id}}" class="glyphicon glyphicon-edit">Editar</a>
+                <a href="#/detele/{{item.Id}}" class="glyphicon glyphicon-trash">Excluir</a>
+            </td>
+        </tr>
+    </table>
+</div>

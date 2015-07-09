@@ -361,6 +361,8 @@
     <Content Include="Views\AngularJs\Validation.cshtml" />
     <Content Include="Views\AngularJs\Aba.cshtml" />
     <None Include="Views\Cidade\Index.cshtml" />
+    <Content Include="Views\Produto\Index.cshtml" />
+    <Content Include="Views\Produto\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
