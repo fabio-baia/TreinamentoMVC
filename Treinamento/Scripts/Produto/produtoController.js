@@ -41,7 +41,7 @@ app.controller('EditController', function ($scope, $http, $routeParams, $locatio
         $http.post('/Api/Produto', $scope.Produto).success(function () {
             $location.path('/list');
         }).error(function (data) {
-            $scope.error = data.ExceptionMessage;
+            $scope.Error = data.ExceptionMessage;
         });
     }
 
@@ -49,7 +49,7 @@ app.controller('EditController', function ($scope, $http, $routeParams, $locatio
         $http.put('/Api/Produto', $scope.Produto).success(function () {
             $location.path('/list');
         }).error(function (data) {
-            $scope.error = data.ExceptionMessage;
+            $scope.Error = data.ExceptionMessage;
         });
     }
 
@@ -59,7 +59,20 @@ app.controller('EditController', function ($scope, $http, $routeParams, $locatio
         else
             update();
     }
+});
 
-    
+app.controller('DeleteController', function ($scope, $http, $routeParams, $location) {
+    var id = $routeParams.id;
 
+    $http.get('/Api/Produto/' + id).success(function (data) {
+        $scope.Produto = data;
+    });
+
+    $scope.delete = function() {
+        $http.delete('/Api/Produto/' + id).success(function() {
+            $location.path('/list');
+        }).error(function(data) {
+            $scope.Error = data;
+        });
+    }
 });
