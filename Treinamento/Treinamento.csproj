@@ -297,6 +297,7 @@
     <Content Include="Scripts\jquery.tornarAzul.js" />
     <Content Include="Scripts\Pessoa\scriptCidade.js" />
     <Content Include="Scripts\Pessoa\scriptTelefone.js" />
+    <Content Include="Scripts\Produto\produtoController.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -363,6 +364,8 @@
     <None Include="Views\Cidade\Index.cshtml" />
     <Content Include="Views\Produto\Index.cshtml" />
     <Content Include="Views\Produto\List.cshtml" />
+    <Content Include="Views\Produto\Edit.cshtml" />
+    <Content Include="Views\Produto\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
