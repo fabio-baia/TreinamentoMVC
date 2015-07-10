@@ -12,6 +12,13 @@ namespace Treinamento.Core.Context.Initializer
             context.Cidades.Add(new Cidade{ Nome = "São Paulo", Uf = "SP" });
             context.Cidades.Add(new Cidade{ Nome = "Porto Alegre", Uf = "RS" });
 
+            context.Produtos.Add(new Produto
+            {
+                Nome = "Caneta",
+                Valor = 1,
+                Ativo = true
+            });
+
             base.Seed(context);
         }
     }
