@@ -115,3 +115,8 @@ C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinament
 C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.xml
 C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Security.xml
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Glimpse.Ado.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Glimpse.AspNet.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Glimpse.Core.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Glimpse.EF6.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Glimpse.Mvc5.dll
