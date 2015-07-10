@@ -54,10 +54,10 @@ app.controller('EditController', function ($scope, $http, $routeParams, $locatio
     }
 
     $scope.save = function() {
-        if ($scope.Produto.Id === 0)
-            create();
-        else
+        if ($scope.Produto.Id > 0)
             update();
+        else
+            create();
     }
 });
 
