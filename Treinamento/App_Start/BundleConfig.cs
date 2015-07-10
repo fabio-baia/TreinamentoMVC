@@ -14,7 +14,7 @@ namespace Treinamento
                         "~/Scripts/jquery-ui-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        //"~/Scripts/jquery.unobtrusive*",
+                //"~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -26,6 +26,10 @@ namespace Treinamento
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/all.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/SignalR").Include(
+                        "~/Scripts/jquery.signalR-2.2.0.js"
+                        ));
         }
     }
 }
