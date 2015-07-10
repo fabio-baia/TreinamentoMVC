@@ -16,7 +16,7 @@
             <td>{{item.Nome}}</td>
             <td>{{item.Valor | number:2}}</td>
             <td>
-                <span class="label" ng-class="{true: 'label-success', false: 'label-danger', '': 'hidden''}[item.Ativo]">
+                <span class="label" ng-class="{true: 'label-success', false: 'label-danger', '': 'hidden'}[item.Ativo]">
                     {{item.Ativo? 'Ativo' : 'Descontinuado'}}
                 </span>
             </td>
