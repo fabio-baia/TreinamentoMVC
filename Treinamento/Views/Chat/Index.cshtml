@@ -1,0 +1,42 @@
+﻿@section scripts{
+    @Scripts.Render("~/bundles/SignalR")
+        <script src="signalr/hubs"></script>
+}
+
+<div class="container">
+    <input type="text" id="message" />
+    <input type="button" id="sendmessage" value="Enviar" />
+    <input type="hidden" id="displayname" />
+
+    <div id="discussion"></div>
+</div>
+
+<script>
+    var chat = $.connection.chatHub;
+    chat.clientHeight.broadcastMessage = function (name, message, date) {
+        var encodedName = $("</div>").text(name).html();
+        var encodedMessage = $("</div>").text(message).html();
+
+        $("#discussion").append("<strong>" + date + " - " + encodedName + " disse</strong>:&nbsp;&nbsp;" + encodedMessage + "<br />");
+
+    };
+
+    $("#displayname").val(prompt("Digite seu nome: ", ''));
+    $("#message").focus();
+
+    function send() {
+        chat.server.send($("#displayname").val(), $("#message"));
+
+        $("#message").val('').focus();
+    }
+
+    $.connection.hub.start().done(function () {
+        $(document).keyup(function (e) {
+            if (e.keyCode === 13)
+                send();
+        });
+
+        $("#sendmessage").click(send);
+    });
+
+</script>

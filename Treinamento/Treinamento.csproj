@@ -236,6 +236,7 @@
     <Compile Include="Controllers\AngularJsController.cs" />
     <Compile Include="Controllers\Api\ProdutoController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\CidadeController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HistoricoController.cs" />
@@ -250,6 +251,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HtmlHelperExtension.cs" />
+    <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artista.cs" />
@@ -387,6 +389,7 @@
     <Content Include="Views\AngularJs\Dom.cshtml" />
     <Content Include="Views\AngularJs\Validation.cshtml" />
     <Content Include="Views\AngularJs\Aba.cshtml" />
+    <Content Include="Views\Chat\Index.cshtml" />
     <None Include="Views\Cidade\Index.cshtml" />
     <Content Include="Views\Produto\Index.cshtml" />
     <Content Include="Views\Produto\List.cshtml" />
