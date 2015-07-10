@@ -13,9 +13,9 @@
 
 <script>
     var chat = $.connection.chatHub;
-    chat.clientHeight.broadcastMessage = function (name, message, date) {
-        var encodedName = $("</div>").text(name).html();
-        var encodedMessage = $("</div>").text(message).html();
+    chat.client.broadcastMessage = function (name, message, date) {
+        var encodedName = $("<div/>").text(name).html();
+        var encodedMessage = $("<div/>").text(message).html();
 
         $("#discussion").append("<strong>" + date + " - " + encodedName + " disse</strong>:&nbsp;&nbsp;" + encodedMessage + "<br />");
 
@@ -25,7 +25,7 @@
     $("#message").focus();
 
     function send() {
-        chat.server.send($("#displayname").val(), $("#message"));
+        chat.server.send($("#displayname").val(), $("#message").val());
 
         $("#message").val('').focus();
     }
