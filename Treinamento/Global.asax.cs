@@ -7,6 +7,7 @@ using System.Web.Routing;
 using Treinamento.App_Start;
 using Treinamento.Context.Initializer;
 using Treinamento.Core.Context.Initializer;
+using Treinamento.Instrumentation;
 
 namespace Treinamento
 {
@@ -15,6 +16,11 @@ namespace Treinamento
 
     public class MvcApplication : HttpApplication
     {
+        protected void Application_BeginRequest()
+        {
+            Context.PageInstrumentation.ExecutionListeners.Add(new CustomExecutionListener());
+        }
+
         protected void Application_Start()
         {
             Database.SetInitializer(new LojaInitializer());

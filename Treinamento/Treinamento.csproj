@@ -253,6 +253,7 @@
     </Compile>
     <Compile Include="Helpers\HtmlHelperExtension.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Instrumentation\CustomExecutionListener.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artista.cs" />
