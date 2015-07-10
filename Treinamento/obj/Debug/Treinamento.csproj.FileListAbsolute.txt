@@ -104,3 +104,14 @@ C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinament
 C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\pt-BR\Treinamento.resources.dll
 C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.dll
 C:\Users\fabio.baia\Documents\Visual Studio 2013\Projects\Treinamento\Treinamento\obj\Debug\Treinamento.pdb
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Security.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Owin.dll
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.xml
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\fabio.baia\documents\visual studio 2013\Projects\Treinamento\Treinamento\bin\Microsoft.Owin.Security.xml
